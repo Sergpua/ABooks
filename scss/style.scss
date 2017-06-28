@@ -1,7 +1,57 @@
 $bg_color: #c4c4c4;
-$dark_color: #2d2d2d;
+$dark: #2d2d2d;
+$green: #5EB62E;
+$lime: #9FC32E;
+$screen_sm: 768px;
 
 body{
 	background-color: $bg_color;
 	padding-top: 50px;
 }
+
+.carousel .item{
+	height: 500px;
+}
+
+.navbar-brand{
+	a{
+		font-size: 25px;
+		font-weight: bold;
+		color: $green;
+		text-decoration: none;
+		
+	}
+}
+
+.navbar-nav{
+	float:right;
+	@media screen and (max-width: $screen_sm){
+		float:none;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	
+}
+
+.navbar-collapse{
+		@media screen and (max-width: $screen_sm){
+			padding: 0px;
+		}
+	}
+#login-btn:before{
+	display: table;
+	content: "";
+}
+
+.tabl{
+	display: table;
+	height: 50px;
+	.tabl-cell{
+		display: table-cell;
+		width:100%;
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+
+

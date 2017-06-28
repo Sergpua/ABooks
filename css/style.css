@@ -2,4 +2,38 @@ body {
   background-color: #c4c4c4;
   padding-top: 50px; }
 
+.carousel .item {
+  height: 500px; }
+
+.navbar-brand a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #5EB62E;
+  text-decoration: none; }
+
+.navbar-nav {
+  float: right; }
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      float: none;
+      margin-left: 0px;
+      margin-right: 0px; } }
+
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    padding: 0px; } }
+
+#login-btn:before {
+  display: table;
+  content: ""; }
+
+.tabl {
+  display: table;
+  height: 50px; }
+  .tabl .tabl-cell {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
