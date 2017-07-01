@@ -7,9 +7,14 @@ $screen_sm: 768px;
 $fontSmall: 12px;
 $grey: #444;
 $bookStatistikHeight: 35px;
+$bookBgOpacity: rgba(0,0,0, 0.5);
 
 body{
 	background-color: $bg_color;
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	padding-top: 50px;
 }
 
@@ -58,14 +63,10 @@ body{
 	}
 }
 
-.main{
-	margin-top: 15px;
-}
-
 .menu-left{
 	padding: 0px;
+	margin-top: 15px;
 	border: 1px solid #000;
-	border-radius: 5px;
 	background-color: $dark;
 	ul{
 		padding: 0px;
@@ -91,15 +92,52 @@ body{
 	}
 }
 
+.content{
+	margin-top: 15px;
+}
+
 .filter{
 	border: 1px solid green;
 	height: 50px;
 }
+
 .book-data-short{
+	background-color: $bookBgOpacity;
+	margin-top: 15px;
 	border: 1px solid #000;
 	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	.row{
+			padding: 5px 0px;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	.col-sm-{
+		&1,&2,&3,&4,&5,&6,&7,&8,&9,&10,&11,&12{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.thumbnail{
+		margin-bottom: 5px;
+		background-color: $bookBgOpacity;
+	}
+	@media screen and (max-width: $screen_sm){
+			.book-title-header,.author-header,.description-short{
+		padding-left: 10px;
+	}
+		}
+	
+	.book-title-header,.author-header{
+		font-weight: bold;
+	}
 
-	.book-statistic{
+	.description-short{
+		margin-top: 10px;
+	}
+
+	.book-statistic{		
 		.upload-date{
 			line-height: $bookStatistikHeight;
 			font-size: $fontSmall;
@@ -110,12 +148,16 @@ body{
 			font-size: $fontSmall;
 			color: $grey;
 		}
+		.btn-more{
+			text-align: right;
+		}
 	}
 }
 	
 
 
 .anuncio{
+	margin-top: 15px;
 	height: 500px;
 	border: 1px solid #000;
 	border-radius: 5px;
