@@ -1,4 +1,5 @@
-
-\.sass-cache/0020d6a8557e536c12e7e0d41b0875360fc47305/style\.scssc
-
 *.scssc
+.sass-cache
+\.idea/
+
+tmp/smarty/templates_c/
