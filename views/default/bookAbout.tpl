@@ -18,29 +18,29 @@
                     Book title
                 </div>
                 <div class="col-sm-8 col-md-9 book-title">
-                    Rebelion en la granja
+                    {$books[0].title}
                 </div>
                 <div class="col-sm-4 col-md-3 author-header">
                     Author
                 </div>
                 <div class="col-sm-8 col-md-9 author">
-                    George Orwell
+                    {$books[0].author}
                 </div>
                 <div class="col-sm-12 description-short">
-                    &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut expedita facilis harum minima nulla maxime eius numquam tempora quas sed quo, magni mollitia perferendis sunt quaerat autem, dolores blanditiis officiis.
+                    &nbsp;&nbsp;&nbsp;&nbsp;{$books[0].description}
                 </div>
             </div>
         </div>
         <div class="col-sm-12 book-statistic">
             <div class="row">
                 <div class="col-sm-5 upload-date">
-                    Subido: 28.06.2017
+                    Subido: ???
                 </div>
                 <div class="col-sm-5 uploaded-by">
-                    Subido por: Anonimo
+                    Subido por: {$books[0].uploader}
                 </div>
                 <div class="col-sm-2 btn-more">
-                    <a href="#" class="btn btn-success">
+                    <a href="index.php?controller=book&action=book&id={$books[0].id}" class="btn btn-success">
                         Mas
                     </a>
                 </div>

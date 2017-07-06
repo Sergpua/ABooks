@@ -2,24 +2,22 @@
 /**
  * Created by PhpStorm.
  * User: Serg
- * Date: 02.07.2017
- * Time: 19:10
+ * Date: 05.07.2017
+ * Time: 13:38
  */
-
 include_once 'model/BooksModel.php';
 
-function indexAction($smarty){
-    $books = getAllBooks();
+function bookAction($smarty){
+    $book = getBookById($_GET['id']);
 
-    $smarty->assign('pageTitle', 'Inicio');
-    $smarty->assign('books', $books);
+    $smarty->assign('pageTitle', $book['title']);
+    $smarty->assign('book', $book);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'menuTop');
     loadTemplate($smarty, 'slider');
 
-    loadTemplate($smarty, 'content');
+    loadTemplate($smarty, 'bookDetails');
 
     loadTemplate($smarty, 'footer');
-
 }

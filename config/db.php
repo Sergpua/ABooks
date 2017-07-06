@@ -12,6 +12,6 @@ function getConnectionToDB(){
         exit();
     }
 
-    mysqli_set_charset($connection, 'utf-8');
+    mysqli_query($connection, "set names 'utf8'");
     return $connection;
 }

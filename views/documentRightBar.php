@@ -1,1 +1,0 @@
-<aside class="anuncio col-sm-3"></aside>
